@@ -1,0 +1,45 @@
+<section>
+  <fieldset>
+    <label for="">Nombre del Pokemon</label>
+    <input
+      type="text"
+      name="nombre"
+      [value]="pokemon.nombre"
+      (input)="cambiarNombre($event)"
+    >
+  </fieldset>
+  <fieldset>
+    <label for="">Foto del Pokemon</label>
+    <input
+      type="url"
+      name="foto"
+      [value]="pokemon.foto"
+      (input)="cambiarFoto($event)"
+    >
+  </fieldset>
+  <fieldset>
+    <label for="">Descripciòn del Pokemon</label>
+    <textarea
+      name="descripcion"
+      [value]="pokemon.descripcion"
+      (input)="cambiarDescripcion($event)"
+    ></textarea>
+  </fieldset>
+  <fieldset>
+    <label for="">Tipo de Pokemon</label>
+    <select
+      name="tipo"
+      [value]="pokemon.tipo"
+      (change)="cambiarTipo($event)"
+    >
+      <option value="Planta">Planta</option>
+      <option value="Fuego">Fuego</option>
+      <option value="Agua">Agua</option>
+      <option value="Electrico">Electrico</option>
+      <option value="Roca">Roca</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <button (click)="guardar()">Guardar</button>
+  </fieldset>
+</section>

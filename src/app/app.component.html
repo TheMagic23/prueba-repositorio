@@ -1,0 +1,20 @@
+<app-mostrar-imagen  [imagen]="primeraImagen" >
+</app-mostrar-imagen>
+<app-mostrar-imagen [imagen]="gigaChad"></app-mostrar-imagen>
+<app-mostrar-imagen [imagen]="imagenRota"></app-mostrar-imagen>
+<section>
+  <fieldset>
+    <app-mostrar-imagen [imagen]="imagenUsuario"></app-mostrar-imagen>
+  </fieldset>
+  <fieldset>
+    <label for="">Ingresa una URL de imagen :D</label>
+    <input
+      type="url"
+      name="imagen"
+      [value]="imagenUsuario"
+      (input)="escucharImagenUsuario($event)"
+    >
+  </fieldset>
+</section>
+<app-formulario (rescate)="guardarPokemon($event)" ></app-formulario>
+<app-listar-pokemones [pokemones]="listaPokemon" ></app-listar-pokemones>
